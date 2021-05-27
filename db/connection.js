@@ -4,8 +4,8 @@ require('dotenv').config({
    path: `./.env.${NODE_ENV}`
 });
 
-const conexion = new Sequelize(
-   'Delilah-Resto',
+const connection = new Sequelize(
+   'delilah_resto',
     process.env.DB_USER,
     process.env.DB_PASS,
     {
@@ -15,7 +15,7 @@ const conexion = new Sequelize(
 
 );
 
-conexion
+connection
         .authenticate()
 .then(()=> {
    console.log('Conexion exitosa');
@@ -23,9 +23,9 @@ conexion
 .catch(err => {
     console.log(err);
 })
-.finally(()=> {
-   conexion.close();
-})
+// .finally(()=> {
+//    connection.close();
+// })
 
 
-module.exports = conexion;
+module.exports = connection;

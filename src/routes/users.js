@@ -1,16 +1,10 @@
 const {Router} = require('express');
 const router = Router();
+const UserController = require('../controllers/users');
 
-
-router.get('/', (req, res) => {
-    res.send('Ruta en funcionamiento');
-})
-
-router.post('/', (req, res) => {
-    console.log(req.body);
-    res.send('Recibido');
-})
-
+//Routes user
+router.route('/').get(UserController.getAll).post(UserController.create)
+router.route('/:id').patch(UserController.updateUser).delete(UserController.deleteUser)
 
 
 

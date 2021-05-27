@@ -1,3 +1,4 @@
 /node_modules
 /sequelizer
 .env.developer
+/docs
