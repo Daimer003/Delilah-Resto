@@ -6,7 +6,7 @@ class User {
        const {body} = req;
        
        try {
-       //2 Crear usuario connlos datos recibidos 
+       //2 Crear usuario con los datos recibidos 
         const userCreated = await usersModel.create({
             name: body.name,
             password: body.password,
