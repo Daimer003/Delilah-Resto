@@ -42,7 +42,7 @@ class User {
       return res.status(500).json({ message: "update error" });
     }
   }
-  //  Eliminar usuario
+  //Eliminar usuario
   static async deleteUser(req, res, next) {
     try {
       const userId = await req.params.id;

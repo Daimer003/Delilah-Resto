@@ -6,7 +6,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.use('/api/user',require('./routes/users.js'));
+app.use('/api/users',require('./routes/users.js'));
+app.use('/api/products', require('./routes/products.js'));
 
 
 app.listen(3000, () => {
